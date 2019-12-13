@@ -1,4 +1,0 @@
-This is a test file
-Hello, how are you?
-I am doing fine thanks.
-Good bye!
