@@ -51,58 +51,36 @@ li a {
 }
 
 
-/* On hover changes color */
-/*background = color of bar & color = color of text*/
+/*header bar */
 
-#res {
-    box-shadow: 10px 10px 5px darkgrey;
-    margin-right: 5px;
-}
-/*side menu Start*/
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    opacity: 0.8;
-}
-
-.sidenav a{
-    padding: 16px 16px 16px 64px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+.header-bar{
     display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover .offcanvas a:focus{
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn{
-    position: absolute;
+    width: 100%;
+    background-color: black;
+    opacity: 50%;
+    padding: 1% 0 1% 4%;
+    position: fixed;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    z-index: 1;
 }
 
-/*push content*/
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
+.header-bar a{
+    padding: 0 2% 0.65% 2%;
+    margin-right: 3%;
+    color: white;
+    text-decoration: none;
 }
-@media screen and (max-height: 450px){
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+
+.header-bar a:hover{
+    border-bottom: 5px solid blue;
 }
+
+.active{
+    border-bottom: 5px solid red;
+}
+
+
+
 /*Projects*/
 .projects {
     /*backgound*/
@@ -126,12 +104,23 @@ li a {
     font-size: 15;
 }
 
+a li::marker{
+    text-decoration: none;
+    color: #212529;
+    cursor: none;
+}
+
 .projects li{
     font-family: pixel;
     font-size: 13;
     line-height: 90%;
 }
 /*Image bar*/
+
+.images{
+    padding-left: 4%;
+}
+
 div.img {
     margin: 10px;
     border: 1px solid lightgrey;
@@ -152,8 +141,35 @@ div.img:hover {
 div.desc {
     padding: 15px;
     text-align: center;
+    background-color: lightgray;
+    opacity: 75%;
 }
 
-blockquote.twitter-timeline{
-    max-width: 400px;
+/* mobile responsive */
+@media screen and (max-width: 600px){
+    .images{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
+
+    .img{
+        min-width: 250px;
+    }
+
+    .header-bar{
+        position: relative;
+        height: 5%;
+        padding: 1% 0 3% 4%;
+    }
+
+    .header-bar a{
+        margin-left: 5%;
+    }
+
+    /* only show important links on mobile */
+    #top-link,#project-link,#image-link{
+        display: none;
+    }
 }

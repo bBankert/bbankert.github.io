@@ -1,26 +1,21 @@
 <html>
     <head>
-     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-     <script src = "scripts.js"></script>
-     <link rel="stylesheet" type="text/css" href = "style.css"></style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script type="text/Javascript" src ="scripts.js"></script>
+        <link rel="stylesheet" type="text/css" href = "style.css"></style>
 
         <title>Brandon Bankert</title>
     </head>
     <body> 
-        <!--<div class = "loader"></div>-->
-        <div id = "navBar" class="sidenav">
-        <!--Add to these to add parts to the search bar-->
-         <a href="javascript:void(0)" class="closebtn" onclick="closeBar()">&times;</a>
-        <a href="#top">Top</a>
-        <a href="#resume">Resume</a>
-        <a href="#images">Images</a>
-        <a href="breakout-game.html">Game</a>
-        <a href="mailto:bankert.brandon@gmail.com">Contact Me</a>
-        <a href="http://www.github.com/bBankert">GitHub</a>
-        <a href="Resume.pdf" download>Download Resume</a>
-        </div>
-        <div id="main">
-        <span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <div class="header-bar">
+            <!--Add to these to add parts to the search bar-->
+            <a id="top-link" href="#top" onclick="addActiveClass('top-link')">Top</a>
+            <a id="project-link" href="#projects" onclick="addActiveClass('project-link')">Projects</a>
+            <a id="image-link" href="#images" onclick="addActiveClass('image-link')">Images</a>
+            <a id="contact-link" href="mailto:bankert.brandon@gmail.com">Contact Me</a>
+            <a id="github-link" href="http://www.github.com/bBankert">GitHub</a>
+            <a id="resume-link" href="Resume.pdf" download>Resume</a>
         </div>
          <div class="Top">
           <h1 id  = "top-name">Brandon Bankert</h1>
@@ -29,7 +24,7 @@
             </center>
         </div>
         
-         <div class="projects">
+         <div class="projects" id="projects">
             <h1>Projects</h1>
             <h2>&nbsp;Angular UML Editor</h2>
              <ol>
@@ -48,30 +43,29 @@
              <h2>&nbsp;Currently Learning: .NET with C#</h2>
             <ol>
                 <li>Learning to create a web application through .NET</li>
+                <a href="https://github.com/bBankert/.NET-Webpage"><li>Link to GitHub repository</li></a>
             </ol>
             </div>
             <!-- Image Gallery start -->
-            <div class="Images">
-            <div class = "img">
-            <a target="_blank" href="Images/Background.png">
-                <img src="Images/Background.png" width="300" height="200">
-                </a>
-                <div class="desc"> This is the old background image, but it still looks nice</div>
+            <div class="images" id="images">
+                <div class = "img">
+                <a target="_blank" href="Images/Background.png">
+                    <img src="Images/Background.png" width="300" height="200">
+                    </a>
+                    <div class="desc"> This is the old background image, but it still looks nice</div>
+                    </div>
+                <div class = "img">
+                <a target="_blank" href="Images/resume.png"><img src="Images/resume.png"></a>
+                    <div class="desc"> This is my resume</div>
+                    </div>
+                <div class = "img">
+                    <a target = "_blank" href="Images/face.png"><img src="Images/face.png"></a>
+                    <div class="desc">This is a self made image to represent me</div>
+                    </div>
+                <div class = "img">
+                    <a target = "_blank" href="Images/pixelBackground.png"><img src="Images/pixelBackground.png"></a>
+                    <div class="desc">This is the new background; self made of course...</div>
                 </div>
-            <div class = "img">
-            <a target="_blank" href="Images/resume.png"><img src="Images/resume.png"></a>
-                <div class="desc"> This is my resume</div>
-                </div>
-            <div class = "img">
-                <a target = "_blank" href="Images/face.png"><img src="Images/face.png"></a>
-                <div class="desc">This is a self made image to represent me</div>
-                </div>
-            <div class = "img">
-                <a target = "_blank" href="Images/pixelBackground.png"><img src="Images/pixelBackground.png"></a>
-                <div class="desc">This is the new background; self made of course...</div>
-             </div>
-             
-             
             </div>
         
     </body>
