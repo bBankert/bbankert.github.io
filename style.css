@@ -2,6 +2,7 @@ body{
     background-size: cover;
     background-image: url("Images/pixelBackground.png");
     background-repeat: no-repeat;
+    margin: 0;
 }
 @font-face{
     font-family: 'Pixel';
@@ -55,7 +56,6 @@ li a {
 
 .header-bar{
     display: block;
-    left: 0;
     width: 100vw;
     background-color: black;
     opacity: 50%;
