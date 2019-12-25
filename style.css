@@ -8,7 +8,8 @@ body{
     background-image: url("Images/pixelBackground.png");
     background-repeat: no-repeat;
     margin: 0;
-    font-family: pixel
+    font-family: pixel;
+
 }
 
 
@@ -38,6 +39,11 @@ li a {
 }
 
 
+.header-bar,.footer-bar{
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
 /*header bar */
 
 .header-bar{
@@ -56,7 +62,6 @@ li a {
     margin-right: 3%;
     color: white;
     text-decoration: none;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .header-bar a:hover{
@@ -77,12 +82,12 @@ li a {
     /*backgound*/
     position: relative;
     opacity: 90%;
-    left: 4%;
     width: 92%;
     padding: 1% 1% 5% 1%;
     border-radius: 25px;
     background: white;
     align-content: center;
+    margin: 4%;
 }
 .about h1{
     text-align: center;
@@ -116,44 +121,69 @@ a li::marker{
 
 /*Image bar*/
 
-.images{
+.images-container{
     padding-left: 4%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.img {
+.image {
     margin: 10px;
     border: 1px solid lightgrey;
     float: left;
     width: 180px;
 }
 
-.img img {
+.image img {
     width: 100%;
     height: 175px;
 }
 
-.img:hover {
+.image:hover {
     border: 1px solid #777;
     transform: scale(1.2);
 }
 
-.desc {
+.description {
     padding: 15px;
     text-align: center;
     background-color: lightgray;
     opacity: 75%;
+    margin: 0;
+}
+
+
+/* footer bar */
+
+.footer-bar{
+    background-color: black;
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+}
+
+.footer-bar p{
+    flex-grow: 5;
+    padding-left: 5%;
+}
+
+.footer-bar a{
+    flex-grow: 1;
 }
 
 /* mobile responsive */
 @media screen and (max-width: 600px){
-    .images{
+    .images-container{
         display: flex;
         flex-direction: column;
         margin: auto;
         align-items: center;
     }
 
-    .img{
+    .image{
         min-width: 250px;
     }
 
