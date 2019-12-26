@@ -172,6 +172,8 @@ a li::marker{
 
 .footer-bar a{
     flex-grow: 1;
+    text-decoration: none;
+    color: white;
 }
 
 /* mobile responsive */
