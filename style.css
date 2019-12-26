@@ -47,11 +47,12 @@ li a {
 /*header bar */
 
 .header-bar{
-    display: block;
+    display: flex;
+    justify-content: space-evenly;
     width: 100vw;
     background-color: black;
     opacity: 50%;
-    padding: 1% 0 1% 4%;
+    padding: 1% 0 0 4%;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -59,7 +60,7 @@ li a {
 
 .header-bar a{
     padding: 0 2% 0.65% 2%;
-    margin-right: 3%;
+    border-bottom: 5px solid transparent;
     color: white;
     text-decoration: none;
 }
@@ -69,7 +70,7 @@ li a {
 }
 
 .active{
-    border-bottom: 5px solid red;
+    border-bottom: 5px solid red !important;
 }
 
 .active:hover{
@@ -193,14 +194,8 @@ a li::marker{
         position: relative;
         max-height: 5%;
         padding: 3% 0 3% 4%;
-    }
-
-    .header-bar a{
-        margin-left: 5%;
-    }
-
-    /* only show important links on mobile */
-    #top-link,#about-link,#image-link{
-        display: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }
